@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta2-web/css/all.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="mainPage.html">News <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="todolists.html">ToDo lists</a>
+                    </li>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/start.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/ezh.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/final.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="single-post">
+                    <h1 class="text-center">
+                        Новости
+                    </h1>
+                </div>
+                <div class="second-post">
+                    <p class="text-center">
+                        Данный раздел является статическим, новости не подгружаются с сервера!
+                    </p>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div id="all-news"></div>
+                    
+                    <div class="card d-none border" id="news-template">
+                        <div class="card-header"> 
+                            <h2 class="mb-0">
+                                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+                                     aria-expanded="false">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="mb-0 news-title"></h5>
+                                        <p class="text-muted mb-0 news-tags"></p>
+                                    </div>
+                                </button>
+                            </h2>
+                        </div>
+                        <div  class="collapse" >
+                            <div class="card-body p-0">
+                                <p class="m-2 h5 font-weight-normal news-content"></p>
+                                <img class="image" alt=""> 
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <p class="mb-0 font-weight-bold p-1">Date:</p>
+                                        <p class="mb-0 p-1 news-date"></p>
+                                    </div>
+                                    <div class="d-flex p-1">
+                                        <i class="news-likes text-muted"></i><i class="fas fa-heart mx-2 mt-1 text-danger"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container mt-0">
+            <p class="text-muted"> Sticky footer example</p>
+        </div>
+    </footer>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

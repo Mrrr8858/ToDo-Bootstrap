@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta2-web/css/all.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="mainPage.html">News <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="todolists.html">ToDo lists</a>
+                    </li>
+            </div>
+        </nav>
+    </header>
+    <div class="container mb-3">
+        <div class="col pb-1">
+            <div class="card p-2 pt-3">
+                <h5 class="font-weight-bold p-2">Приоритеты элементов ToDo:</h5>
+                <div class="text-uppercase p-2 font-weight-bold ">
+                    <span class="border rounded p-2 bg-light border-dark">обычный</span>
+                    <span class="border rounded p-2 bg-warning border-dark">важный</span>
+                    <span class="border rounded p-2 bg-danger text-white border-dark">критичный</span>
+                </div>
+            </div>
+            <div class="accordion" id="accordionExample">
+
+                <div class="card mt-4 border">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn text-uppercase btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                создать список todo
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                        <div class="card-body p-0">
+                            <form>
+                                <div class="form-group m-4">
+                                    <label for="exampleInputName">Название</label>
+                                    <input type="text" class="form-control" id="exampleInputName"
+                                        aria-describedby="emailHelp" required>
+                                </div>
+                                <div class="card-header border mb-0">
+                                    <span><button type="reset"
+                                            class="btn bg-secondary text-white">Очистить</button></span>
+                                    <span><button type="submit" class="btn bg-success text-white"
+                                            id="postList">Создать</button></span>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-4 border">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn text-uppercase btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                создать элемент todo
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                        <div class="card-body p-0">
+                            <form>
+                                <div class="m-4">
+                                    <div class="form-group">
+                                        <label for="inputTitles">Заголовок</label>
+                                        <input type="text" class="form-control" id="inputTitles" required>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="inputPriority">Приоритет</label>
+                                            <select class="form-control" id="priorityVal">
+                                                <option value="0">Обычный</option>
+                                                <option value="1">Важный</option>
+                                                <option value="2">Критичный</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="inputList">Список</label>
+                                            <select class="form-control" id="listID">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputDescription">Описание</label>
+                                        <textarea class="form-control" id="validationTextarea" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="card-header border mb-0">
+                                    <span><button type="reset"
+                                            class="btn bg-secondary text-white">Очистить</button></span>
+                                    <span><button type="submit" class="btn bg-success text-white"
+                                            id="postElem">Создать</button></span>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-center">
+                <div class="card-header p-0 pt-2">
+                    <ul class="nav nav-tabs mr-2 ml-2 mt-2 mb-0 card-header-tabs d-flex bd-highlight" id="myTab"
+                        role="tablist"></ul>
+                    <li class="nav-item flex-grow-1 d-none" id="list-template">
+                        <a class="nav-link text-name-list" data-toggle="tab" role="tab" aria-selected="true">Список дел
+                            №1 - Бытовые/учебные</a>
+                        <!--  id="home-tab"  href="#home" aria-controls="home" -->
+                    </li>
+
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent"></div>
+                        <div class="tab-pane fade show d-none" role="tabpanel" id="tab-template">
+                            <!-- id="home" aria-labelledby="home-tab" -->
+                            <div class="d-flex justify-content-between">
+                                <h1 class="text-left text-name-list">Список дел №1 - Бытовые/учебные</h1>
+                                <button type="button" class="btn border btn-danger m-2 deleteList">
+                                    <i class="fas fa-trash-alt mr-1" style="color: white;"></i>
+                                    Удалить список
+                                </button>
+                            </div>
+
+                            <ul class="list-group" id="listOfElem"></ul>
+
+                            <li class="list-group-item justify-content-between p-0 d-none" id="elem-template">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-1 bd-highlight text-priority p-0">
+                                        <!-- bg-danger -->
+                                        &nbsp;
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <h5 class="my-2 ml-3 text-name">Что-то сделать</h5>
+                                            <h5 class="m-2 ml-3 text-muted text-date">28.10.21</h5>
+                                        </div>
+                                        <p class="text-left mb-2 text-description">Хотя бы что-то</p>
+                                    </div>
+                                </div>
+                                <div class="btn-group m-3 btnGroup" role="group" aria-label="Basic example" id="btnGroup">
+                                    <button type="button" class="btn border border-success done">
+                                        <i class="fas fa-check" style="color: Green;"></i>
+                                    </button>
+                                    <button type="button" class="btn border border-warning edit" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        <!-- data-name="Что-то сделать" data-priority="3" data-description="Хотя бы что-то" -->
+                                        <i class="fas fa-pen" style="color: orange;"></i>
+                                    </button>
+                                    <button type="button" class="btn border border-danger deleteTask">
+                                        <i class="fas fa-trash-alt" style="color: Red;"></i>
+                                    </button>
+                                </div>
+                            </li>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Редактирование элемента ToDo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="submit-modal">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="recipient-name" class="col-form-label">Заголовок</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="form-group col-md-6 mt-1">
+                                <label for="inputPriority">Приоритет</label>
+                                <select class="form-control" id="priority">
+                                    <option value="0">Обычный</option>
+                                    <option value="1">Важный</option>
+                                    <option value="2">Критичный</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputDescription" class="col-form-label">Описание</label>
+                            <textarea class="form-control" id="inputDescription"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
+                            <button type="submit" class="btn btn-success">Сохранить изменения</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container mt-0">
+            <p class="text-muted"> Sticky footer example</p>
+        </div>
+    </footer>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/toDo.js"></script>
+
+</body>
+
+</html>
